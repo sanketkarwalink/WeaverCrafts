@@ -1,0 +1,173 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Links */
+a {
+  color: #8B4513;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #6E3812;
+}
+
+/* Hero section */
+.hero {
+  background-color: #F5DEB3;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #8B4513;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.hero .btn-primary {
+  background-color: #8B4513;
+  border-color: #8B4513;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.hero .btn-primary:hover {
+  background-color: #6E3812;
+  border-color: #6E3812;
+}
+
+/* Product section */
+.product-section {
+  padding: 80px 0;
+}
+
+.product-section .section-title {
+  font-size: 2.5rem;
+  color: #8B4513;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.product-section .product-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.product-section .product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-section .product-thumbnail {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-section .product-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-section .product-price {
+  font-size: 1.2rem;
+  color: #8B4513;
+  font-weight: bold;
+}
+
+/* Why Choose Us section */
+.why-choose-section {
+  background-color: #F5DEB3;
+  padding: 80px 0;
+}
+
+.why-choose-section h1 {
+  font-size: 2.5rem;
+  color: #8B4513;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.feature {
+  margin-bottom: 30px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  color: #8B4513;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .product-section .section-title {
+      font-size: 2rem;
+  }
+
+  .product-section .product-title {
+      font-size: 1.3rem;
+  }
+
+  .product-section .product-price {
+      font-size: 1rem;
+  }
+
+  .why-choose-section h1 {
+      font-size: 2rem;
+  }
+
+  .feature h3 {
+      font-size: 1.2rem;
+  }
+
+  .feature p {
+      font-size: 1rem;
+  }
+}
+/* Button Styles */
+.btn-primary {
+  background-color: #8B4513;
+  border-color: #8B4513;
+  color: #fff; /* Fix text color */
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Added color transition */
+}
+
+.btn-primary:hover {
+  background-color: #6E3812;
+  border-color: #6E3812;
+  color: #fff; /* Fix text color */
+}

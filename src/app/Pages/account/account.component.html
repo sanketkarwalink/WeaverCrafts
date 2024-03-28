@@ -1,0 +1,179 @@
+
+    <head>
+    </head>
+    <body>
+        <div *ngIf="showaccountPage" class="container">
+            <div class="main">
+                
+                <div class="row">
+                    <div class="col-lg-3">
+                       <div class=" text-center sidebar">
+                            <div class="car-body">
+                                <div class="mt-2">
+                                    <a href="" class="">Home</a>
+                                    <a  (click)="UserOrderedData()">Orders</a>
+                                    <a href="" class="">Contact Us</a>
+                                    <a href="" class="">Setting</a>
+                                    <a href="" class="">Sign Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 mt-1 heading" *ngIf="profileData" >
+                      <h1 class="">Profile</h1>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <h5 class="">Full Name</h5>
+                          </div>
+                          <div class="col-md-9 text-secondary">
+                            {{profileData.name}}
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <h5 class="">Email</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                          <span>{{profileData.email}}</span>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <h5>Phone</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                          {{profileData.moblieno}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <h5>Address</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                          {{profileData.address}}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    </div>
+
+            </div>
+        </div>
+            
+            <!--order page-->
+        <section *ngIf="!showorderpage" class="h-100 gradient-custom" >
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-10 col-xl-8" style="width: 100%;">
+                  <div class="card" style="border-radius: 10px;">
+                    <div class="card-header px-4 py-5" style="display: flex;">
+                      <Button  type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" (click)="profilepage()"><i class="fa fa-arrow-left" aria-hidden="true"></i></Button>
+                      <h1 class="text-muted mb-0">Decor My Way</h1>
+                    </div>
+                    <div class="card-body p-4">
+                      <div class="d-flex justify-content-between align-items-center mb-4">
+                        <p class="lead fw-normal mb-0" style="color: #a8729a;">Your Orders</p>
+                        
+                      </div>
+
+
+                      <div *ngFor="let order of OrderedData" class="card shadow-0 border mb-4" (click)="showDetails(order)" >
+                        <div class="card-body bordereffect">
+                          <a  style="text-decoration: none;">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <img [src]="order.confirmationItems[0].productImage" class="img-fluid" alt="furniture">
+                              </div>
+                              <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted mb-0">{{ order.confirmationItems[0].productname }}</p>
+                              </div>
+                              <!-- Add similar columns for other details such as color, description, quantity, and price -->
+                              <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted mb-0 small">{{ order.confirmationItems[0].description }}</p>
+                              </div>
+                              <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted mb-0 small">Qty: {{ order.confirmationItems[0].quantity }}</p>
+                              </div>
+                              <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted mb-0 small">{{ order.totalAmount }}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+          
+
+
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <div *ngIf="selectedOrder" class="details-section table-responsive-lg">
+            <button class="btn btn-primary" (click)="showTableSection()">Back to Table</button>
+            <h4>Order Details</h4>
+            <div class="row">
+                <!-- User details table -->
+                <div class="col-md-6">
+                    <div class="user-details">
+                        <h5 class="user-details-heading">User Details</h5>
+                        <p><strong>Order ID:</strong> {{ selectedOrder.id }}</p>
+                        <p><strong>User ID:</strong> {{ selectedOrder.userId }}</p>
+                        <p><strong>Confirmation Date:</strong> {{ selectedOrder.confirmationDate }}</p>
+                        <p><strong>Mode of Payment:</strong> {{ selectedOrder.modeOfPayment }}</p>
+                        <p><strong>Address:</strong> {{ selectedOrder.address }}</p>
+                        <p><strong>Username:</strong> {{ selectedOrder.username }}</p>
+                    </div>
+                </div>
+                <!-- Product details table -->
+                <div class="col-md-6">
+                    <div class="product-details">
+                        <h5>Product Details</h5>
+                        <table class="table table-hover border text-center">
+                            <thead>
+                                <tr class="bg-dark text-light">
+                                    <th scope="col">Product ID</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Product Image</th>
+                                    <!-- Add more columns as needed -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of selectedOrder.confirmationItems">
+                                    <td>{{ item.productId }}</td>
+                                    <td>{{ item.productname }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td><img [src]="item.productImage" alt="Product Image"></td>
+                                    <!-- Add more cells for additional product details -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Total payment -->
+                <div class="col-md-6">
+                    <div class="total-amount  ">
+                        <h5>Total Amount</h5>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Total Amount:</strong></td>
+                                    <td>{{ selectedOrder.totalAmount }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+

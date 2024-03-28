@@ -1,0 +1,63 @@
+<section style="background-color: #eee; " >
+    <div class="container py-5">
+      <div class="row justify-content-center mb-3">
+        <ng-container *ngIf="searchList.length > 0; else noResults">
+          <h2 class="text-success">Results found for '{{ resultcount }}'.</h2>
+          <div class="card shadow-0 border rounded-3 " style="margin-bottom: 10px;" *ngFor="let p of searchList">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0" >
+                  <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                    <img src={{p.image}}
+                      class="w-100" />
+                    <a href="#!">
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h1>{{p.productname}}</h1>
+                  <div class="d-flex flex-row">
+                    <div class="text-danger mb-1 me-2">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <span>310</span>
+                  </div>
+                  <div class="mt-1 mb-0 text-muted small">
+                    <h3>{{p.description}}</h3>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                  <div class="d-flex flex-row align-items-center mb-1">
+                    <h2 class="mb-1 me-1">Rs {{p.price}}</h2>
+                  </div>
+                  <h6 class="text-success">Free shipping</h6>
+                  <div class="d-flex flex-column mt-4">
+                    <button class="btn btn-primary btn-sm" type="button">Details</button>
+                    <button class="btn btn-outline-primary btn-sm mt-2" type="button" (click)="AddtoCart(p.productId)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #noResults>
+          <div class="text-center mt-5">
+            <img src="assets/image/not-found.png" alt="Not Found Image" width="150" height="150">
+            <h4 class="mt-3">Oops! No products found for '{{ searchKeyword }}'.</h4>
+            <p class="text-muted">Try a different search term or explore our other categories.</p>
+          </div>
+        </ng-template>
+        
+
+      </div>
+      
+    </div>
+  </section>

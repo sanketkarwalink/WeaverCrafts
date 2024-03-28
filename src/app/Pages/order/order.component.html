@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Detail</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="header">
+            <h1 class="text-center">Checkout</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <!-- Product Section -->
+                <section id="product-section">
+                    <h2 class="mb-4">Products</h2>
+                    <!-- Product List -->
+                    <div class="product-list">
+                        <!-- Product 1 -->
+                        <div class="media" *ngFor="let order of orderDetails">
+                            <img src="{{order.productImage}}" class="mr-3" alt="Product Image">
+                            <div class="media-body">
+                                <h5 class="mt-0">{{order.productname}}</h5>
+                                <p>Price: Rs. {{order.productprice}}</p>
+                                <p>Quantity: {{order.quantity}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Amount -->
+                    <div class="total-amount mt-4">
+                        Total Amount: Rs. {{totalAmount}}
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-5">
+                <!-- Address and Payment Section -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Address Section -->
+                        <section id="address-section" *ngIf="profileData">
+                            <h2 class="mb-4">Address</h2>
+                            <!-- Address Display -->
+                            <div class="address-info">
+                                <h4>Name: {{profileData.name}}</h4>
+                                <p>Address: {{profileData.address}}</p>
+                            </div>
+                            <!-- Edit Address Button -->
+                            <button type="button" class="btn btn-primary mt-3" id="editAddressBtn">Edit Address</button>
+                        </section>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- Payment System Section -->
+                        <section id="payment-system">
+                            <h2 class="mb-4">Payment System</h2>
+                            <!-- Payment Method Options -->
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" name="paymentMethod" id="creditCard">
+                                    <label for="creditCard"><i class="fas fa-credit-card"></i> Credit Card</label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="paymentMethod" id="paypal">
+                                    <label for="paypal"><i class="fab fa-paypal"></i> PayPal</label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="paymentMethod" id="bankTransfer">
+                                    <label for="bankTransfer"><i class="fas fa-university"></i> Bank Transfer</label>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- Place Order Section -->
+                <section id="place-order" class="text-center">
+                    <button class="btn btn-primary mt-3" (click)="OrderConfirm()">Place Order</button>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Custom JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

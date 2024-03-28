@@ -1,0 +1,226 @@
+#order-summary {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  #order-summary h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .product-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .product-item .media {
+    padding: 15px;
+  }
+
+  .product-item img {
+    max-width: 100px;
+    border-radius: 8px;
+  }
+
+  .product-item h5 {
+    color: #333;
+    margin-bottom: 0;
+  }
+
+  .product-item p {
+    margin-bottom: 5px;
+  }
+
+  .total-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  #address-section {
+    margin-bottom: 20px;
+  }
+
+  .address-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  #editAddressBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  #editAddressBtn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Edit Address Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+  }
+
+  /* Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Modal Form Styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  #payment-system {
+    margin-top: 20px;
+  }
+  
+  .payment-option {
+    margin-bottom: 10px;
+  }
+  
+  .payment-option input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .payment-option label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .payment-option i {
+    margin-right: 5px;
+  }
+  .container{
+    margin-bottom: 50px;
+  }
+
+
+  /* styles.css */
+
+/* Header styles */
+.header h1 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Product section styles */
+#product-section h2 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.product-list .media img {
+  width: 100px;
+  height: auto;
+}
+
+.total-amount {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Address and Payment section styles */
+#address-section h2, #payment-system h2 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.address-info h4 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.address-info p {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+}
+
+.payment-options .payment-option label {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+}
+
+/* Place Order section styles */
+#place-order .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-family: 'Arial', sans-serif;
+}
+
+#place-order .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+
+/* Place Order section styles */
+#place-order .btn-primary {
+  background-color: #6d5835; /* Dark brown */
+  border-color: #6d5835;
+  font-family: 'Arial', sans-serif;
+}
+
+#place-order .btn-primary:hover {
+  background-color: #4a3721; /* Darker brown */
+  border-color: #4a3721;
+}

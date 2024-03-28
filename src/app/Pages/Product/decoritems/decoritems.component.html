@@ -1,0 +1,27 @@
+
+		<!-- Start Product Section -->
+		<br>
+		<div class="product-section" style="background-color: beige;">
+			<div class="container">
+                <div class="heading">
+                    <h1>Decor Items</h1>
+                </div>
+				<div class="row">
+
+					<!-- Start Column 1 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0" *ngFor="let d of decorItemCategory">
+						<a class="product-item" (click)="sendData(d.categoryID)" routerLink="/shop">
+							<img src={{d.imagename}} class="img-fluid product-thumbnail">
+							<h3 class="product-title" style="aspect-ratio: 3/2;object-fit: contain;">{{d.categoryname}}</h3>
+							<span class="icon-cross">
+								<img src="assets/image/cross.svg" class="img-fluid">
+							</span> 
+						</a>
+					</div>
+                    
+                    <!-- End Column 1 -->
+				</div>
+			</div>
+		</div>
+		<br>
+		<!-- End Product Section -->

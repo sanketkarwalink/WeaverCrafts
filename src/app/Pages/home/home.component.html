@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeaverCrafts - Handcrafted Treasures</title>
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles -->
+<!--<link href="styles.css" rel="stylesheet"> -->
+</head>
+<body>
+
+<!-- Hero section -->
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Discover Artisanal Treasures</h1>
+                    <p class="mb-4">Step into a world where creativity knows no bounds. Our curated collection showcases the finest handcrafted treasures, each piece telling a unique story of artistry and passion. From intricately woven textiles to delicately sculpted ceramics, explore a universe of artisanal wonders waiting to be discovered.</p>
+                    <p><a href="#" class="btn btn-primary me-2">Shop Now</a><a href="#" class="btn btn-primary">Explore</a></p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="hero-img-wrap">
+                    <img src="assets\image\Image-removebg-preview.png" class="img-fluid" style="width: 100%;" >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Product section -->
+<div class="product-section">
+    <div class="container">
+        <h2 class="section-title">Handcrafted Items</h2>
+        <div class="row">
+            <!-- Start Column 1 -->
+            <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+                <h3 class="section-title">Crafted With Excellent Material</h3>
+                <p>Indulge in quality and style—every product on our website is meticulously crafted with excellent materials, promising enduring beauty and comfort.</p>
+                <p><a href="#" class="btn btn-primary">Explore</a></p>
+            </div>
+            <!-- End Column 1 -->
+            <!-- Start Column 2 -->
+            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0" *ngFor="let item of Randomdata">
+                <div class="product-item">
+                    <img [src]="item.image" class="img-fluid product-thumbnail">
+                    <h3 class="product-title">{{item.productname}}</h3>
+                    <strong class="product-price">Rs.{{item.price}}</strong>
+                    <span class="icon-cross">
+                        <img src="assets/image/cross.svg" class="img-fluid">
+                    </span>
+                </div>
+            </div> 
+            <!-- End Column 2 -->
+        </div>
+    </div>
+</div>
+
+<!-- Why Choose Us section -->
+<div class="why-choose-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <h1 class="section-title">Why Choose Us</h1>
+                <p>Choose Us for Crafted Excellence Discover the artistry of handcrafted treasures with us. Each piece is meticulously crafted by skilled artisans, promising unrivaled quality and attention to detail. Our curated selection offers unique creations that embody the essence of artisanal excellence. Support fair trade and sustainable craftsmanship while elevating your style. Experience the difference with us.</p>
+                <div class="row my-5">
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="assets/image/truck.svg" alt="Fast & Free Shipping" class="imf-fluid">
+                            </div>
+                            <h3>Fast & Free Shipping</h3>
+                            <p>Unbox Handcrafted Elegance: Discover artisanal treasures at WeaverCrafts, delivered swiftly to your doorstep, free of charge. Elevate your space effortlessly with our exquisite pieces!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="assets/image/bag.svg" alt="Easy to Shop" class="imf-fluid">
+                            </div>
+                            <h3>Easy to Shop</h3>
+                            <p>At WeaverCrafts, finding your perfect piece is a breeze. With simple navigation and seamless checkout, shop hassle-free for handcrafted treasures.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="assets/image/support.svg" alt="24/7 Support" class="imf-fluid">
+                            </div>
+                            <h3>24/7 Support</h3>
+                            <p>WeaverCrafts offers round-the-clock assistance. Get help anytime, anywhere. Your satisfaction is our priority.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="assets/image/return.svg" alt="Hassle Free Returns" class="imf-fluid">
+                            </div>
+                            <h3>Hassle Free Returns</h3>
+                            <p>WeaverCrafts offers hassle-free returns. Shop confidently with our stress-free return policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="img-wrap">
+                    <img src="assets\image\rugs_usa-image-1631754557701-1228x1536.jpeg" alt="Rugs" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

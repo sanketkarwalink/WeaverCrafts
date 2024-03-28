@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Contact Section */
+.ftco-section {
+  padding: 100px 0;
+}
+
+.contact-wrap {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-wrap h1 {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-wrap p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Styles */
+.contactForm .form-group {
+  margin-bottom: 20px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.contactForm input[type="submit"] {
+  background-color: #8B4513;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactForm input[type="submit"]:hover {
+  background-color: #6E3812;
+}
+
+/* Social Media Section */
+.social-media h3 {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.social-media p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.social-media a {
+  color: #333;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+/* Image Section */
+.info-wrap {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.info-wrap .img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Additional Styles */
+.dbox {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dbox p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-align: left;
+}

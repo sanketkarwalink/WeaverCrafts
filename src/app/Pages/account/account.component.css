@@ -1,0 +1,415 @@
+body{
+    margin-top: 20px;
+
+    margin: 0;
+}
+.main{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topbar{
+    background-color: rgb(10, 57, 213);
+    overflow: hidden;
+    background: none !important;
+    overflow: auto;
+    border-width: 0px !important;
+}
+.topbar a{
+    float: right;
+    color: rgb(12, 12, 12);
+    text-align: center;
+    padding: 20px 26px;
+    text-decoration: none;
+    font-size: 26px;
+}
+.sidebar{
+    
+    height: 100%;
+}
+.sidebar a{
+    margin-left: 10px;
+    display: block;
+    
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    background-color: whitesmoke;
+}
+
+.car-body{
+    margin-top: 30px;
+}
+.car-body a{
+    text-decoration: none;
+    text-align: center;
+    
+    color: black;
+}
+
+.car-body a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+.heading h1{
+    /* CSS for h1 heading */
+     color: #333; 
+     font-family: 'Arial', sans-serif; 
+     font-size: 3em; 
+     font-weight: bold; 
+     text-align: center; 
+     margin-bottom: 20px; 
+ }
+ .bordereffect{
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+ }
+ 
+
+ .main{
+    width: 100%;
+}
+ h3{
+    text-align: center;
+    font-weight:bolder;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+@keyframes fadeInOut {
+    from { background: rgba(0, 0, 0, 0); }
+    to { background: rgba(0, 0, 0, 0.5); }
+  }
+
+  /* Apply the animation to the modal container */
+  .fadde {
+    animation: fadeInOut 0.3s ease;
+  }
+header button{
+    color: white;
+    background-color: black;
+}
+.inputgroup .input{
+    
+    border: 2px solid black;
+    width: 100%;
+    padding: 10px;
+    color: black;
+	outline:none;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+.inputgroup{
+	
+	display:flex;
+    width:100%;
+    position: relative;
+}
+.inputgroup span{
+	left:0;
+	margin-left: 10px;
+    margin-top: -6px; 
+    position: absolute;
+    top: 1rem;
+    color: grey;
+    pointer-events: none;
+	transition:0.3s;
+	font-size:1.2rem;
+    
+}
+
+.input:valid ~ span,
+.input:focus ~ span
+{
+    transform:
+		translateX(10px) translateY(-7px);	
+		color: black;
+		font-size:0.80rem;
+		margin-top:-30px;
+		background:white;
+        padding: 4px; 
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+
+.custom-file-input {
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table img{
+    height: 150px;
+    width: 150px;
+}
+.table td{
+    word-wrap: break-word;
+    max-width: 100px;
+    align-self: center;
+}   
+
+/* order-list.component.css */
+
+.container-fluid {
+    padding-top: 20px;
+  }
+  
+  .table-responsive-lg {
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+  }
+  
+  .details-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-section h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .details-section p {
+    margin-bottom: 10px;
+  }
+  
+  .product-image img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .table-product {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-product th,
+  .table-product td {
+    padding: 10px;
+  }
+  
+  .table-product th {
+    background-color: #333;
+    color: #fff;
+  }
+  /* order-list.component.css */
+
+.user-details,
+.product-details {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 20px; /* Add some space between the tables */
+}
+
+.user-details h5,
+.product-details h5 {
+    margin-bottom: 15px; /* Add space below the heading */
+    color: #333; /* Dark text color */
+}
+
+.user-details p,
+.product-details p {
+    margin-bottom: 10px; /* Add space below each paragraph */
+}
+
+.user-details p strong,
+.product-details p strong {
+    margin-right: 5px; /* Add space between the strong tag and the text */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.bg-dark.text-light th,
+.bg-dark.text-light td {
+    background-color: #343a40; /* Dark background for table headers and cells */
+    color: #fff; /* White text color for table headers and cells */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff; /* Border color */
+    color: #fff; /* Text color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    border-color: #0056b3; /* Darker border color on hover */
+}
+.user-details {
+    font-family: Arial, sans-serif; /* Use Arial font for user details */
+    font-size: 16px; /* Larger text size */
+}
+
+.user-details-heading {
+    font-size: 20px; /* Larger heading size */
+    color: #333; /* Dark text color */
+}
+.total-amount {
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f8f9fa; /* Add background color */
+    border: 1px solid #dee2e6; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.total-amount h5 {
+    margin-bottom: 10px; /* Add margin bottom to the heading */
+    color: #333; /* Set text color */
+}
+
+
+  
+  
+
+/* Profile Page CSS */
+
+/* Sidebar Navigation */
+.sidebar {
+    background-color: #f8f1e3; /* Creamy background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: #6d5643; /* Dark brown font color */
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.sidebar a:hover {
+    color: #95705f; /* Light brown color on hover */
+}
+
+/* Profile Details */
+.heading {
+    padding-left: 20px;
+}
+
+.heading h1 {
+    color: #95705f; /* Light brown heading color */
+    margin-bottom: 20px;
+}
+
+/* Profile Details Cards */
+.card-body {
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-body h5 {
+    color: #6d5643; /* Dark brown color for headings */
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #6c757d; /* Dark gray text color */
+}
+
+.card-body hr {
+    margin: 20px 0; /* Increased margin for separation */
+    border-color: #dee2e6; /* Light gray border color */
+}
+
+/* Orders Section */
+.gradient-custom {
+    background: linear-gradient(to right, #f8f1e3, #c7a17a); /* Gradient background */
+    color: #6d5643; /* Dark brown text color */
+    padding: 50px 0; /* Increased padding */
+}
+
+.card-header {
+    background-color: #fff; /* White background for card header */
+    border-bottom: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.card-header h1 {
+    color: #95705f; /* Light brown color for heading */
+    margin-right: 20px; /* Margin for spacing */
+}
+
+.card-body p {
+    color: #000; /* Black color for paragraph */
+}
+
+.bordereffect {
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #dee2e6; /* Light gray border */
+    padding: 10px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.bordereffect:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect on hover */
+}
+
+.details-section {
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Increased padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin-top: 20px; /* Increased margin from the top */
+}
+
+.user-details-heading {
+    color: #95705f; /* Light brown color for heading */
+    margin-bottom: 10px; /* Increased margin */
+}
+
+.product-details h5 {
+    color: #95705f; /* Light brown color for heading */
+    margin-bottom: 10px; /* Increased margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-bottom: 20px; /* Increased margin for better spacing */
+    }
+}

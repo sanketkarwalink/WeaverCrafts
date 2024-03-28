@@ -1,0 +1,111 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #333; /* Dark text color */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center align container */
+}
+
+/* Product Details Section */
+.ProductDetails h1,
+.ProductDetails h2,
+.ProductDetails h4 {
+  color: #333;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.ProductDetails img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.buy-btn {
+  background-color: #343a40; /* Dark gray button background */
+  color: #fff; /* White button text color */
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px; /* Increase padding for larger button */
+  margin-top: 30px; /* Increase margin for spacing */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #212529; /* Darker gray on hover */
+}
+
+.buy-btn:focus {
+  outline: none;
+}
+
+/* Related Products Section */
+#featured h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+#featured p {
+  color: #666;
+}
+
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.product-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Softer shadow on hover */
+}
+
+.product-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product-title {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-price {
+  color: #6c757d; /* Gray text color for price */
+  font-weight: bold;
+}
+
+.btn-remove {
+  background-color: transparent;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn-remove:hover {
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .ProductDetails {
+    padding-top: 50px;
+  }
+}

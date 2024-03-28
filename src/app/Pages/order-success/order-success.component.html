@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Success</title>
+  <style>
+    /* CSS for full-width container */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px; /* Optional: Set a max-width for better readability */
+      margin: 0 auto; /* Center the container */
+      padding: 20px; /* Optional: Add padding for better spacing */
+    }
+
+    /* Add your existing CSS styles here */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Order Successfully Placed!</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="order-details">
+      <h2>Item Ordered</h2>
+      <div *ngFor="let item of Orderdata.confirmationItems" class="product">
+        <img [src]="item.productImage" alt="Product Image" class="product-image">
+        <div class="product-info">
+          <table>
+            <tr>
+              <th>Product Name:</th>
+              <td>{{ item.productname }}</td>
+            </tr>
+            <tr>
+              <th>Quantity:</th>
+              <td>{{ item.quantity }}</td>
+            </tr>
+           
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="message">
+      <p>Total Amount : Rs.{{Orderdata.totalAmount}}</p>
+    </div>
+    <div class="divider"></div>
+    <div class="divider"></div>
+    <div class="message">
+      <p>Thank you for your purchase!</p>
+    </div>
+    <div class="divider"></div>
+    <div class="info-section">
+      <div class="shipping-info">
+        <h2>Shipping Information</h2>
+        <table>
+          <tr>
+            <th>Shipping Address:</th>
+            <td>########</td>
+          </tr>
+          <tr>
+            <th>Shipping Method:</th>
+            <td>Standard Shipping</td>
+          </tr>
+        </table>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="billing-info">
+        <h2>Billing Information</h2>
+        <table>
+          <tr>
+            <th>Billing Address:</th>
+            <td>{{ Orderdata.address }}</td>
+          </tr>
+          <tr>
+            <th>Payment Method:</th>
+            <td>{{ Orderdata.modeOfPayment }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="buttons">
+      <a routerLink="/" class="button button-green">Continue Shopping</a>
+      
+    </div>
+  </div>
+</body>
+</html>

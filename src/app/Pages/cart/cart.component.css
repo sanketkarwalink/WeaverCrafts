@@ -1,0 +1,162 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Cart Section Styles */
+.cart-section {
+  padding: 3rem 0;
+}
+
+.site-blocks-table {
+  overflow: auto;
+}
+
+.site-blocks-table .product-thumbnail {
+  width: 200px;
+}
+
+.site-blocks-table .btn {
+  padding: 2px 10px;
+}
+
+.site-blocks-table thead th {
+  padding: 30px;
+  text-align: center;
+  border-width: 0px !important;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+}
+
+.site-blocks-table td {
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.site-blocks-table tbody tr:first-child td {
+  border-top: 1px solid #3b5d50 !important;
+}
+
+.site-blocks-table .btn {
+  background: none !important;
+  color: #000000;
+  border: none;
+  height: auto !important;
+}
+
+.site-block-order-table th {
+  border-top: none !important;
+  border-bottom-width: 1px !important;
+}
+
+.site-block-order-table td,
+.site-block-order-table th {
+  color: #000000;
+}
+
+/* Heading Styles */
+.heading h1 {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn {
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  background: #6c757d; /* Gray color */
+  border-color: #6c757d;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #495057; /* Darker gray color on hover */
+}
+
+.btn-outline-dark {
+  background: none;
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.btn-outline-dark:hover {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+/* Input Styles */
+.input-group-prepend .btn,
+.input-group-append .btn {
+  border-radius: 0;
+}
+
+/* Text Color Styles */
+.text-black {
+  color: #000000 !important;
+}
+
+/* Background and Border Styles */
+.bg-black {
+  background-color: #000000;
+}
+
+.border-black {
+  border-color: #000000;
+}
+
+/* Additional Styles */
+.quantity-container .btn {
+  border-radius: 0;
+}
+
+.quantity-amount {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+}
+
+/* Table Styles */
+.table {
+  background-color: #ffffff;
+}
+
+.table th,
+.table td {
+  border-color: #dee2e6;
+}
+
+.table th {
+  color: #000000;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .quantity-container .btn {
+      padding: 5px 10px;
+  }
+}
+
+/* Checkout Button Styles */
+.btn-checkout {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-checkout:hover {
+  background-color: #212529;
+  border-color: #212529;
+}
