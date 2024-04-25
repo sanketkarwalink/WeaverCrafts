@@ -1,111 +1,364 @@
-/* styles.css */
+/* Improved Navbar Styles */
 
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Fonts */
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+  height: 6rem;
+  background-color: #ffffff; /* Consider a gradient or a subtle pattern */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  border-bottom: 0.125rem solid #e0b996;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar:hover {
+  background-color: #f8f8f8; /* Slight change on hover for interactive feedback */
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  color: #5c3d27;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.navbar-brand:hover {
+  color: #e0b996; /* Change color on hover */
+}
+
+
+
+
+
+.logo img{
+  height: 50px;
+  width: 100%;
+  background-size: cover;
   
-  /* Fonts */
-  body {
-    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Example font family */
-  }
-  
-  /* Navbar */
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.search-select {
+  background-color: #f3f3f3;
+  width: 150px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  padding: 8px;
+  font-size: 1rem;
+  margin-right: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+.search-icon {
+  background-color: #e0b996;
+  color: #5c3d27;
+  padding: 8px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animation for search icon */
+}
+
+.search-icon:hover {
+  background-color: #d3a87c; /* Darker shade on hover */
+}
+
+.nav-cart {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav-cart a {
+  color: #5c3d27;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.3s ease; /* Animation for cart icon */
+}
+
+.nav-cart a:hover {
+  color: #e0b996; /* Change color on hover */
+}
+
+.cartvalue {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #e0b996;
+  color: black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 25px;
+  margin-right: 15px;
+}
+
+/* Navbar Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-menu li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.nav-menu a {
+  color: #5c3d27;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions for menu items */
+}
+
+.nav-menu li:hover a {
+  color: #e0b996; /* Change color on hover */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .navbar {
-    height: 80px;
-    background-color: #f8f1e6; /* Light beige background */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    border-bottom: 2px solid #ca8f62; /* Brown border bottom */
-  }
-  
-  .navbar-brand {
-    font-weight: bold;
-    font-size: 2rem;
-    color: #5c3d27; /* Dark brown */
-  }
-  
-  .nav-logo img {
-    height: 60px;
-    width: auto;
-  }
-  
-  /* Navbar Search */
-  .nav-search {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-select {
-    background-color: #f3f3f3;
-    width: 100px;
-    border-radius: 4px 0 0 4px;
-    border: none;
-    padding: 8px;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-  }
-  
-  .search-input {
-    flex: 1;
-    padding: 8px;
-    border-radius: 0;
-    border: none;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-  }
-  
-  .search-icon {
-    background-color: #ca8f62; /* Brown */
-    color: white;
-    padding: 8px;
-    border-radius: 0 4px 4px 0;
-  }
-  
-  /* Navbar Cart */
-  .nav-cart {
-    position: relative;
-    font-size: 1.5rem;
-  }
-  
-  .nav-cart a {
-    color: #5c3d27; /* Dark brown */
-    text-decoration: none;
-  }
-  
-  .cartvalue {
-    position: absolute;
-    top: -10px;
-    right: 5px;
-    background-color: #ca8f62; /* Brown */
-    color: white;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-  }
-  
-  /* General styles */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .nav-logo {
-    height: 50px; /* Adjust the height as needed */
-    width: 100px; /* Adjust the width as needed */
-}
-
-.nav-logo {
-    margin-right: 20px; /* Adjust margin as needed */
-}
-
-.logo {
-    width: 100px; /* Adjust width as needed */
+    flex-direction: column;
     height: auto;
+    padding: 20px;
+  }
+
+  .nav-logo {
+    margin-bottom: 20px;
+  }
+
+  .nav-search,
+  .nav-menu {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .search-select,
+  .search-input,
+  .nav-menu a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nav-cart {
+    margin-top: 20px;
+  }
+}
+/* Navbar Styles */
+.navbar {
+  background: #f5f5dc; /* Beige background for a natural look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar .container-fluid {
+  padding: 0 15px; /* Padding for alignment */
+}
+
+.navbar-nav {
+  font-family: 'Georgia', 'Times New Roman', Times, serif; /* Elegant font for links */
+}
+
+.nav-link {
+  color: #8b4513; /* Saddle Brown text for an earthy feel */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #daa520; /* Goldenrod color on hover/focus for a warm highlight */
+  transform: translateY(-2px); /* Slight raise effect on hover/focus */
+}
+
+.btn-outline-dark {
+  border-color: #8b4513; /* Saddle Brown border for buttons */
+  color: #8b4513; /* Saddle Brown text for buttons */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+  background: #8b4513; /* Saddle Brown background on hover/focus */
+  color: #ffffff; /* White text on hover/focus */
+}
+
+/* Animation for navbar links */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to navbar links */
+.nav-item {
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+/* Sticky top with animation */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020; /* Ensure navbar stays on top */
+  animation: fadeInDown 0.5s ease-in-out;
+}
+
+/* Keyframes for sticky top animation */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 15px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  background-color: #f8f4f0; /* Light background color */
+  color: #343a40; /* Text color */
+  border-bottom: none; /* Remove border */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* Input Styles */
+.inputgroup {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #f8f4f0; /* Light background color */
+}
+
+.input:focus {
+  border-color: #a7b6c2; /* Border color when focused */
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+/* Error Message Styles */
+.invalid-feedback {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545; /* Error text color */
+}
+
+/* Button Styles */
+.btn-dark {
+  background-color: #343a40; /* Dark button background color */
+  border-color: #343a40; /* Dark button border color */
+  color: #fff; /* Button text color */
+  border-radius: 8px;
+  padding: 12px 24px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-dark:hover {
+  background-color: #23272b; /* Darker background color on hover */
+  border-color: #23272b; /* Darker border color on hover */
+}
+
+/* Link Styles */
+.text-dark {
+  color: #343a40; /* Dark text color */
+}
+
+.text-dark:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Adjust modal size for smaller screens */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+}
+
+/* Basic styling for error messages */
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Style for invalid form controls */
+.input.ng-invalid {
+  border-color: #dc3545;
 }

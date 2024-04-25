@@ -52,6 +52,7 @@ result:any
         
         if (data.message == 'Product added to cart successfully') {
           alert('Added to Cart Successfully!');
+          this.Countporuduct();
         } 
       },
       (error) => {
@@ -68,5 +69,13 @@ result:any
     this.router.navigate(['/detailpage']);
     
 
+  }
+  countproduct:any
+  Countporuduct(){
+    this.http.get(`http://localhost:8080/cart/cart/count/${this.UserId}`).subscribe((data:any)=>{
+      this.countproduct = data;
+      console.log(data);
+      this.sharedService.setSharedDatacount(this.countproduct);
+    });
   }
 }

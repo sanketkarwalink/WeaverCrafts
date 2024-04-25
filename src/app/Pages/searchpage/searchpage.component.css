@@ -1,0 +1,55 @@
+/* CSS: Enhanced styling for a handcrafted products theme with animations */
+.product-card {
+    background-color: #f4f0e8; /* Warm off-white background */
+    border: 1px solid #ccc2b2; /* Soft beige border */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Slight raise effect on hover */
+}
+
+.card-body {
+    color: #666; /* Darker color for readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b85c38; /* Earthy red tone for headings */
+}
+
+.btn-primary {
+    background-color: #b85c38; /* Earthy red tone for primary button */
+    border-color: #b85c38;
+}
+
+.btn-primary:hover {
+    background-color: #9e4e2a; /* Darker shade on hover */
+    border-color: #9e4e2a;
+}
+
+.btn-outline-primary {
+    color: #b89f85; /* Warm gray for secondary button */
+    border-color: #b89f85;
+}
+
+.btn-outline-primary:hover {
+    color: #f4f0e8;
+    background-color: #b89f85;
+    border-color: #b89f85;
+}
+
+.text-success {
+    color: #28a745; /* Green color for success messages and in-stock information */
+}
+
+/* Additional styles can be added as needed */
+/* ... (rest of the CSS remains the same) ... */
+
+/* Custom background colors for product cards */
+.product-card:nth-child(odd) {
+    background-color: #f9f6e0; /* Light yellow background for odd-indexed cards */
+}
+
+.product-card:nth-child(even) {
+    background-color: #f0ede5; /* Light beige background for even-indexed cards */
+}

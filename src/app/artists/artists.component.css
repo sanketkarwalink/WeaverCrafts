@@ -1,0 +1,122 @@
+/* styles.css */
+/* styles.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #5D4037; /* A warm brown shade for the title */
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.artist-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 40px;
+  border: 1px solid #FFECB3; /* A light, creamy border color */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #F5F5F5; /* A neutral light gray background */
+}
+
+.artist-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08); /* A deeper shadow on hover for a 'lifting' effect */
+}
+
+/* Rest of the styles remain unchanged */
+
+
+.artist-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08); /* A deeper shadow on hover for a 'lifting' effect */
+}
+
+.artist-content {
+  display: flex;
+  align-items: center;
+}
+
+.artist-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #BCAAA4; /* A complementary border color for the image */
+  transition: border-color 0.3s ease;
+}
+
+.artist-image:hover {
+  border-color: #8D6E63; /* A darker shade on hover for a subtle effect */
+}
+
+.artist-info {
+  text-align: left;
+}
+
+.artist-name {
+  font-size: 1.8em;
+  color: #795548; /* A rich brown that pairs well with the theme */
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.artist-description {
+  font-size: 1.1em;
+  color: #6d7c85; /* A neutral color for the description to maintain focus on the name */
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .artist-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artist-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artist-image {
+    margin: 0 0 30px 0;
+  }
+
+  .artist-info {
+    text-align: center;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa; /* A neutral background color */
+}
+
+/* Rest of the existing styles remain unchanged */
+
+.artist-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 40px;
+  border: 1px solid #FFECB3; /* A light, creamy border color */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #F5F5F5; /* A neutral light gray background */
+}
+
+/* Rest of the existing styles remain unchanged */

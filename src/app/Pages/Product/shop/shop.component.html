@@ -1,33 +1,26 @@
 <section style="background-color: #f8f9fa;">
     <div class="container py-5">
         <div class="row justify-content-center mb-3">
-            <div class="card shadow-0 border rounded-3" style="margin-bottom: 30px;" *ngFor="let p of SelectedCategory">
-                <div class="card-body">
+            <div class="product-card" *ngFor="let p of SelectedCategory">
+                <div class="product-card-body">
                     <div class="row align-items-center">
                         <div class="col-md-12 col-lg-4 col-xl-4 mb-4 mb-lg-0">
-                            <div class="bg-image hover-zoom ripple rounded" style="overflow: hidden; max-height: 300px;">
+                            <div class="product-image">
                                 <img src={{p.image}} class="w-100" alt="Product Image">
                                 <a href="#!">
                                     <div class="hover-overlay">
-                                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                                        <div class="mask"></div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-8 col-xl-8">
                             <h2 class="mb-3">{{p.productname}}</h2>
-                            <div class="d-flex flex-row align-items-center mb-3">
-                                <div class="text-warning me-2">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <span>310</span>
-                            </div>
+                            <!-- Removed review section and added In Stock information -->
+                            <h3>In Stock: {{p.quantity}}</h3><br>
                             <p class="mb-4">{{p.description}}</p>
                             <div class="d-flex flex-row align-items-center">
-                                <h3 class="me-3">Rs {{p.price}}</h3>
+                                <h3 class="me-3">₹{{p.price}}</h3>
                                 <div>
                                     <h6 class="text-success mb-2">Free shipping</h6>
                                     <button class="btn btn-primary me-2" (click)="sendproductId(p.productId)">Details</button>
@@ -40,5 +33,4 @@
             </div>
         </div>
     </div>
-  </section>
-  
+</section>

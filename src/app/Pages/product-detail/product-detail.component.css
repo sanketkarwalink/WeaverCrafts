@@ -1,56 +1,101 @@
-/* Global Styles */
+/* Enhanced CSS for Handcrafted Products Website with Animations */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa; /* Light gray background */
-  color: #333; /* Dark text color */
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fdfaf6; /* Warm off-white background */
+  color: #5a4e47; /* Rich brown text color */
+  transition: background-color 0.5s ease; /* Smooth background color transition */
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto; /* Center align container */
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out; /* Fade in animation for container */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Product Details Section */
-.ProductDetails h1,
-.ProductDetails h2,
-.ProductDetails h4 {
-  color: #333;
+.ProductDetails .product-category,
+.ProductDetails .product-name,
+.ProductDetails .product-details-title {
+  color: #5a4e47;
   font-family: 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  animation: slideInFromLeft 0.5s ease-in-out; /* Slide in from left animation */
 }
 
-.ProductDetails img {
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.ProductDetails .product-image img {
   border-radius: 10px;
   max-width: 100%;
   height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.ProductDetails .product-image img:hover {
+  transform: scale(1.05); /* Scale up on hover */
 }
 
 .buy-btn {
-  background-color: #343a40; /* Dark gray button background */
-  color: #fff; /* White button text color */
+  background-color: #c19a6b; /* Earthy tan button background */
+  color: #fff;
   border: none;
   border-radius: 20px;
-  padding: 15px 30px; /* Increase padding for larger button */
-  margin-top: 30px; /* Increase margin for spacing */
+  padding: 15px 30px;
+  margin-top: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transition */
 }
 
 .buy-btn:hover {
-  background-color: #212529; /* Darker gray on hover */
+  background-color: #a67c52; /* Darker tan on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
 }
 
 .buy-btn:focus {
   outline: none;
+  animation: pulse 1s infinite; /* Pulse animation on focus */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.quantity-input {
+  width: 50px;
+  height: 30px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.quantity-input:focus {
+  border-color: #c19a6b; /* Change border color on focus */
 }
 
 /* Related Products Section */
-#featured h3 {
-  color: #333;
+#featured .featured-title {
+  color: #5a4e47;
   font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
 }
 
-#featured p {
-  color: #666;
+#featured .featured-description {
+  color: #7e746c;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#featured .featured-description:hover {
+  color: #5a4e47; /* Change color on hover */
 }
 
 .product-section {
@@ -60,17 +105,25 @@ body {
   margin-top: 50px;
 }
 
-.product-item {
+.product-card {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #eae0da;
   border-radius: 10px;
   padding: 20px;
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  animation: popIn 0.5s ease-in-out; /* Pop in animation */
 }
 
-.product-item:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Softer shadow on hover */
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.product-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transform: scale(1.03);
 }
 
 .product-thumbnail {
@@ -83,11 +136,11 @@ body {
 .product-title {
   margin-top: 15px;
   font-size: 18px;
-  color: #333;
+  color: #5a4e47;
 }
 
 .product-price {
-  color: #6c757d; /* Gray text color for price */
+  color: #6c757d;
   font-weight: bold;
 }
 
@@ -100,7 +153,7 @@ body {
 }
 
 .btn-remove:hover {
-  color: #333;
+  color: #5a4e47;
 }
 
 /* Responsive Styles */

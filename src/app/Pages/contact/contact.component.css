@@ -1,10 +1,11 @@
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #f8f9fa;
   color: #333;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,6 +17,9 @@ body {
 /* Contact Section */
 .ftco-section {
   padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-wrap {
@@ -23,24 +27,27 @@ body {
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-in-out;
 }
 
 .contact-wrap h1 {
   font-size: 2.5rem;
-  font-style: italic;
   margin-bottom: 20px;
   text-align: center;
+  animation: slideInLeft 1s ease-in-out;
 }
 
 .contact-wrap p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   text-align: center;
+  animation: slideInRight 1s ease-in-out;
 }
 
 /* Form Styles */
 .contactForm .form-group {
   margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .contactForm input,
@@ -49,6 +56,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ced4da;
+  animation: zoomIn 0.5s ease-in-out;
 }
 
 .contactForm input[type="submit"] {
@@ -60,6 +68,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  animation: pulse 1s infinite;
 }
 
 .contactForm input[type="submit"]:hover {
@@ -69,21 +78,27 @@ body {
 /* Social Media Section */
 .social-media h3 {
   font-size: 2rem;
-  font-style: italic;
   margin-bottom: 20px;
   text-align: center;
+  animation: slideInUp 1s ease-in-out;
 }
 
 .social-media p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   text-align: center;
+  animation: slideInDown 1s ease-in-out;
 }
 
 .social-media a {
   color: #333;
   margin-right: 10px;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #8B4513;
 }
 
 /* Image Section */
@@ -92,6 +107,7 @@ body {
   background-position: center;
   border-radius: 10px;
   height: 100%;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .info-wrap .img {
@@ -100,14 +116,65 @@ body {
 }
 
 /* Additional Styles */
-.dbox {
+.contact-info {
   margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
+  animation: fadeInLeft 0.5s ease-in-out;
 }
 
-.dbox p {
+.contact-info p {
   font-size: 1rem;
   margin-bottom: 5px;
   text-align: left;
+}
+
+.contact-info span {
+  font-weight: bold;
+  color: #8B4513;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }

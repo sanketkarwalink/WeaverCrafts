@@ -14,17 +14,17 @@
 <!-- Hero section -->
 <div class="hero">
     <div class="container">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between align-items-center">
             <div class="col-lg-5">
-                <div class="intro-excerpt">
+                <div class="intro-excerpt animated fadeInLeft">
                     <h1>Discover Artisanal Treasures</h1>
                     <p class="mb-4">Step into a world where creativity knows no bounds. Our curated collection showcases the finest handcrafted treasures, each piece telling a unique story of artistry and passion. From intricately woven textiles to delicately sculpted ceramics, explore a universe of artisanal wonders waiting to be discovered.</p>
-                    <p><a href="#" class="btn btn-primary me-2">Shop Now</a><a href="#" class="btn btn-primary">Explore</a></p>
+                    <p><a routerLink="/product" class="btn btn-primary me-2 animated fadeInUp delay-1s">Shop Now</a></p>
                 </div>
             </div>
             <div class="col-lg-7">
-                <div class="hero-img-wrap">
-                    <img src="assets\image\Image-removebg-preview.png" class="img-fluid" style="width: 100%;" >
+                <div class="hero-img-wrap animated fadeInRight">
+                    <img src="assets/image/Image-removebg-preview.png" alt="Artisanal Products" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -38,19 +38,25 @@
         <div class="row">
             <!-- Start Column 1 -->
             <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-                <h3 class="section-title">Crafted With Excellent Material</h3>
-                <p>Indulge in quality and style—every product on our website is meticulously crafted with excellent materials, promising enduring beauty and comfort.</p>
-                <p><a href="#" class="btn btn-primary">Explore</a></p>
+                <div class="material-excerpt animated fadeInLeft">
+                    <h3 class="section-subtitle">Crafted With Excellent Material</h3>
+                    <p>Indulge in quality and style—every product on our website is meticulously crafted with excellent materials, promising enduring beauty and comfort.</p>
+                    <p><a (click)="exploremore()" class="btn btn-primary animated fadeInUp delay-1s">Explore</a></p>
+                </div>
             </div>
             <!-- End Column 1 -->
             <!-- Start Column 2 -->
             <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0" *ngFor="let item of Randomdata">
-                <div class="product-item">
-                    <img [src]="item.image" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">{{item.productname}}</h3>
-                    <strong class="product-price">Rs.{{item.price}}</strong>
+                <div class="product-item animated fadeInUp" (click)="sendproductId(item.productId)">
+                    <div class="product-img-wrap">
+                        <img [src]="item.image" alt="{{item.productname}}" class="img-fluid product-thumbnail">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">{{item.productname}}</h3>
+                        <strong class="product-price">₹{{item.price}}</strong>
+                    </div>
                     <span class="icon-cross">
-                        <img src="assets/image/cross.svg" class="img-fluid">
+                        <img src="assets/image/cross.svg" alt="Remove" class="img-fluid">
                     </span>
                 </div>
             </div> 
@@ -111,12 +117,14 @@
 
             <div class="col-lg-5">
                 <div class="img-wrap">
-                    <img src="assets\image\rugs_usa-image-1631754557701-1228x1536.jpeg" alt="Rugs" class="img-fluid">
+                    <img style="margin-top: 250px" src="assets\image\whychooseus.jpeg" alt="Rugs" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<app-aboutus></app-aboutus>
+<app-contact></app-contact>
 </body>
 </html>

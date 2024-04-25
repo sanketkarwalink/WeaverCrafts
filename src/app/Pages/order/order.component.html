@@ -10,7 +10,7 @@
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    
+
 </head>
 
 <body>
@@ -54,28 +54,16 @@
                                 <h4>Name: {{profileData.name}}</h4>
                                 <p>Address: {{profileData.address}}</p>
                             </div>
-                            <!-- Edit Address Button -->
-                            <button type="button" class="btn btn-primary mt-3" id="editAddressBtn">Edit Address</button>
                         </section>
                     </div>
                     <div class="col-md-12">
                         <!-- Payment System Section -->
                         <section id="payment-system">
-                            <h2 class="mb-4">Payment System</h2>
+                            <h2>Payment System</h2>
                             <!-- Payment Method Options -->
-                            <div class="payment-options">
-                                <div class="payment-option">
-                                    <input type="radio" name="paymentMethod" id="creditCard">
-                                    <label for="creditCard"><i class="fas fa-credit-card"></i> Credit Card</label>
-                                </div>
-                                <div class="payment-option">
-                                    <input type="radio" name="paymentMethod" id="paypal">
-                                    <label for="paypal"><i class="fab fa-paypal"></i> PayPal</label>
-                                </div>
-                                <div class="payment-option">
-                                    <input type="radio" name="paymentMethod" id="bankTransfer">
-                                    <label for="bankTransfer"><i class="fas fa-university"></i> Bank Transfer</label>
-                                </div>
+                            <div class="payment-option">
+                                <input type="radio" name="paymentMethod" id="Cash On Delivery" [(ngModel)]="selectedPaymentMethod" value="Cash On Delivery">
+                                <label for="Cash On Delivery"><i class="fas fa-university"></i>Cash On Delivery</label>
                             </div>
                         </section>
                     </div>

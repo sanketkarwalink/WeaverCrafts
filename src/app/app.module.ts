@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
-
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './Pages/home/home.component';
-
 import { SalesComponent } from './Pages/sales/sales.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './Pages/footer/footer.component';
@@ -27,34 +22,28 @@ import { SearchpageComponent } from './Pages/searchpage/searchpage.component';
 import { OrderComponent } from './Pages/order/order.component';
 import { ProductDetailComponent } from './Pages/product-detail/product-detail.component';
 import { OrderSuccessComponent } from './Pages/order-success/order-success.component';
-
-
-
+import { CommonModule } from '@angular/common';
+import { ArtistsComponent } from './artists/artists.component'; // Import ArtistsComponent
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     NavbarComponent,
-         HomeComponent,
-      
-         SalesComponent,
-                FooterComponent,
-                FurnitureComponent,
-                DecoritemsComponent,
-                AboutusComponent,
-                ContactComponent,
-                CartComponent,
-                ShopComponent,
-                AccountComponent,
-                SearchpageComponent,
-                OrderComponent,
-                ProductDetailComponent,
-                OrderSuccessComponent
-                
-                
-               
-                  
+    HomeComponent,
+    SalesComponent,
+    FooterComponent,
+    FurnitureComponent,
+    DecoritemsComponent,
+    AboutusComponent,
+    ContactComponent,
+    CartComponent,
+    ShopComponent,
+    AccountComponent,
+    SearchpageComponent,
+    OrderComponent,
+    ProductDetailComponent,
+    OrderSuccessComponent,
+    ArtistsComponent // Include ArtistsComponent in declarations
   ],
   imports: [
     BrowserModule,
@@ -64,10 +53,7 @@ import { OrderSuccessComponent } from './Pages/order-success/order-success.compo
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
-    
-    
-   
+    CommonModule, // Include CommonModule here
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

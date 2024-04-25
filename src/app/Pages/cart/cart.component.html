@@ -1,5 +1,3 @@
-<!-- cart.component.html -->
-
 <div *ngFor="let cart of CartData" class="cart-section before-footer-section">
   <div class="container">
     <div class="row mb-5">
@@ -31,16 +29,16 @@
                 <td>
                   <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                     <div class="input-group-prepend">
-                      <button class="btn btn-dark decrease" type="button" (click)="reduceQuantity(item.productId)">&minus;</button>
+                      <button class="btn btn-dark decrease" type="button" (click)="reduceQuantity(item.productId)">−</button>
                     </div>
                     <input type="text" class="form-control text-center quantity-amount" value="{{item.quantity}}" placeholder="" aria-label="Quantity" aria-describedby="button-addon1" disabled>
                     <div class="input-group-append">
-                      <button class="btn btn-dark increase" type="button" (click)="Addcart(item.productId)">&plus;</button>
+                      <button class="btn btn-dark increase" type="button" (click)="Addcart(item.productId)">+</button>
                     </div>
                   </div>
                 </td>
-                <td>Rs.{{item.price * item.quantity}}</td>
-                <td><a href="#" class="btn btn-outline-danger btn-sm">Remove</a></td>
+                <td>₹{{item.price * item.quantity}}</td>
+                <td><a (click)="deleteItem(item.productId)" class="btn btn-outline-danger btn-sm">Remove</a></td>
               </tr>
             </tbody>
           </table>
@@ -49,28 +47,6 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6">
-        <div class="row mb-5">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <button class="btn btn-dark btn-sm btn-block">Update Cart</button>
-          </div>
-          <div class="col-md-6">
-            <button class="btn btn-outline-dark btn-sm btn-block">Continue Shopping</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <label class="text-black h4" for="coupon">Coupon</label>
-            <p>Enter your coupon code if you have one.</p>
-          </div>
-          <div class="col-md-8 mb-3 mb-md-0">
-            <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-dark">Apply Coupon</button>
-          </div>
-        </div>
-      </div>
       <div class="col-md-6 pl-5">
         <div class="row justify-content-end">
           <div class="col-md-7">
@@ -85,7 +61,7 @@
                 <span class="text-black">Total</span>
               </div>
               <div class="col-md-6 text-right">
-                <strong class="text-black">Rs.{{cart.totalamount}}</strong>
+                <strong class="text-black">₹{{cart.totalamount}}</strong>
               </div>
             </div>
 

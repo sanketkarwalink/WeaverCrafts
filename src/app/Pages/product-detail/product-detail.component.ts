@@ -103,6 +103,7 @@ export class ProductDetailComponent implements OnInit{
         
         if (data.message == 'Product added to cart successfully') {
           alert('Added to Cart Successfully!');
+          this.Countporuduct();
         } 
       },
       (error) => {
@@ -117,6 +118,14 @@ export class ProductDetailComponent implements OnInit{
   sendproductId(productId:number){
     this.sharedservice.setSharedDataProductId(productId);
     this.ngOnInit();
+  }
+  countproduct:any
+  Countporuduct(){
+    this.http.get(`http://localhost:8080/cart/cart/count/${this.UserId}`).subscribe((data:any)=>{
+      this.countproduct = data;
+      console.log(data);
+      this.sharedservice.setSharedDatacount(this.countproduct);
+    });
   }
 
 }

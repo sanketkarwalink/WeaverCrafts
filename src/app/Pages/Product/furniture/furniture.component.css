@@ -1,74 +1,126 @@
 /* Product Section */
 .product-section {
-  padding: 50px 0;
+  background-color: #fdf6e3;
+  padding: 60px 0;
 }
 
-.product-item {
-  background-color: #f8f1e5; /* Creamy background */
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  margin-bottom: 30px;
+.container {
+  max-width: 1140px;
+  margin: auto;
 }
 
-.product-item:hover {
-  transform: translateY(-5px);
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.product-item img {
-  width: 100%;
-  height: auto;
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 250px;
   object-fit: cover;
 }
 
-.product-details {
-  padding: 20px;
+.card-body {
+  padding: 25px;
 }
 
-.product-title {
-  font-size: 1rem; /* Decrease font size */
-  font-weight: bold;
-  color: #3e2723; /* Dark brown text */
-  margin-bottom: 5px; /* Adjust margin */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #5d4037;
 }
 
-.product-price {
-  font-size: 0.9rem; /* Decrease font size */
-  color: #6d4c41; /* Brown text */
-  margin-bottom: 10px;
-}
-
-.btn-primary {
-  background-color: #6d4c41; /* Dark brown button */
-  border-color: #6d4c41;
+/* Button Styles */
+.btn-custom {
+  background-color: #8d6e63;
+  border-color: #8d6e63;
   color: #fff;
-  font-weight: bold;
-  padding: 6px 12px; /* Adjust padding */
-  font-size: 0.8rem; /* Decrease font size */
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #4e342e; /* Darker brown on hover */
-  border-color: #4e342e;
+.btn-custom:hover {
+  background-color: #795548;
+  border-color: #795548;
+}
+
+/* Hover Effects */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  transform: scale(1.1);
 }
 
 /* Section Heading */
-.section-heading {
+.heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
-.section-title {
-  font-size: 2rem; /* Decrease font size */
-  color: #3e2723; /* Dark brown text */
-  font-weight: bold;
-  margin-bottom: 10px;
+.heading h2 {
+  font-size: 2.5rem;
+  color: #5d4037;
+  font-weight: 700;
 }
 
-.section-subtitle {
-  font-size: 1rem; /* Decrease font size */
-  color: #6d4c41; /* Brown text */
+.heading p {
+  font-size: 1.1rem;
+  color: #8d6e63;
+}
+
+
+/* Adjusted Column and Card Styles */
+.col-12.col-md-6.col-lg-4.mb-4 {
+  padding: 0; /* Remove horizontal padding */
+  margin-bottom: 10px; /* Reduced vertical margin */
+}
+
+.card {
+  margin: 5px; /* Further reduced margin to decrease spacing */
+}
+
+/* Add keyframes for fade-in and slide-up animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply the animations to the product cards and heading */
+.product-section .card {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.product-section .heading {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Set the initial state for the animations */
+.product-section .card,
+.product-section .heading {
+  opacity: 0;
+  animation-fill-mode: forwards;
 }

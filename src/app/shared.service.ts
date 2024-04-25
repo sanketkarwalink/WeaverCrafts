@@ -57,4 +57,11 @@ export class SharedService {
   setSharedDataConfirmId(productID: number) {
     this.sharedDataConfirmId.next(productID);
   }
+
+  private sharedDataCount = new BehaviorSubject<number>(0);
+  sharedDataCount$ = this.sharedDataCount.asObservable();
+
+  setSharedDatacount(products: number) {
+    this.sharedDataCount.next(products);
+  }
 }

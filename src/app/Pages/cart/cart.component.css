@@ -1,162 +1,107 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-/* Cart Section Styles */
+/* Cart Styles */
 .cart-section {
-  padding: 3rem 0;
+  padding: 30px;
 }
 
 .site-blocks-table {
-  overflow: auto;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.site-blocks-table .product-thumbnail {
-  width: 200px;
-}
-
-.site-blocks-table .btn {
-  padding: 2px 10px;
-}
-
-.site-blocks-table thead th {
-  padding: 30px;
-  text-align: center;
-  border-width: 0px !important;
-  vertical-align: middle;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 18px;
-}
-
+.site-blocks-table th,
 .site-blocks-table td {
-  padding: 20px;
-  text-align: center;
+  padding: 15px;
+  text-align: left;
   vertical-align: middle;
-  color: rgba(0, 0, 0, 0.8);
 }
 
-.site-blocks-table tbody tr:first-child td {
-  border-top: 1px solid #3b5d50 !important;
-}
-
-.site-blocks-table .btn {
-  background: none !important;
-  color: #000000;
-  border: none;
-  height: auto !important;
-}
-
-.site-block-order-table th {
-  border-top: none !important;
-  border-bottom-width: 1px !important;
-}
-
-.site-block-order-table td,
-.site-block-order-table th {
-  color: #000000;
-}
-
-/* Heading Styles */
-.heading h1 {
-  color: #333;
-  font-family: Arial, sans-serif;
-  font-size: 2em;
+.site-blocks-table th {
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
-/* Button Styles */
-.btn {
-  font-weight: 600;
-  padding: 12px 30px;
-  border-radius: 30px;
-  color: #ffffff;
-  background: #6c757d; /* Gray color */
-  border-color: #6c757d;
-  transition: background-color 0.3s ease;
+.product-thumbnail img {
+  max-width: 100px;
+  height: auto;
 }
 
-.btn:hover {
-  background-color: #495057; /* Darker gray color on hover */
+.product-name {
+  width: 30%;
 }
 
-.btn-outline-dark {
-  background: none;
-  color: #6c757d;
-  border: 1px solid #6c757d;
+.product-price,
+.product-quantity,
+.product-total {
+  width: 10%;
 }
 
-.btn-outline-dark:hover {
-  background-color: #6c757d;
-  color: #ffffff;
+.product-remove {
+  width: 15%;
 }
 
-/* Input Styles */
-.input-group-prepend .btn,
-.input-group-append .btn {
-  border-radius: 0;
-}
-
-/* Text Color Styles */
-.text-black {
-  color: #000000 !important;
-}
-
-/* Background and Border Styles */
-.bg-black {
-  background-color: #000000;
-}
-
-.border-black {
-  border-color: #000000;
-}
-
-/* Additional Styles */
-.quantity-container .btn {
-  border-radius: 0;
+.quantity-container {
+  width: 100%;
 }
 
 .quantity-amount {
-  background-color: #ffffff;
-  border: 1px solid #ced4da;
+  width: 50px;
+  text-align: center;
 }
 
-/* Table Styles */
-.table {
-  background-color: #ffffff;
-}
-
-.table th,
-.table td {
-  border-color: #dee2e6;
-}
-
-.table th {
-  color: #000000;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .quantity-container .btn {
-      padding: 5px 10px;
-  }
-}
-
-/* Checkout Button Styles */
 .btn-checkout {
   background-color: #343a40;
-  border-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-checkout:hover {
-  background-color: #212529;
-  border-color: #212529;
+  background-color: #23272b;
+}
+
+/* Animation for buttons */
+.btn-dark,
+.btn-outline-danger {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-dark:hover,
+.btn-outline-danger:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .site-blocks-table th,
+  .site-blocks-table td {
+    padding: 10px;
+  }
+
+  .product-thumbnail img {
+    max-width: 80px;
+  }
+
+  .product-name {
+    width: 40%;
+  }
+
+  .product-price,
+  .product-quantity,
+  .product-total,
+  .product-remove {
+    width: 15%;
+  }
+
+  .quantity-amount {
+    width: 40px;
+  }
+
+  .btn-checkout {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
 }

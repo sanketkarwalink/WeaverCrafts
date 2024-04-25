@@ -53,6 +53,7 @@ export class CartComponent implements OnInit{
       this.UserId=data
     });
     this.cart();
+    this.Countporuduct();
   }
   isUserLoggedin=false;
 
@@ -105,4 +106,26 @@ export class CartComponent implements OnInit{
       alert('Please login!!');
     }
   }
+  deleteItem(productId: any) {
+    this.http.delete(`http://localhost:8080/cart/${this.UserId}/${productId}`).subscribe(
+        () => {
+            console.log('Product removed successfully');
+            this.ngOnInit()
+            // You can add more actions here that should happen on successful deletion
+        },
+        (error) => {
+            console.error('Error:', error);
+            // You can add more actions here that should happen if an error occurs
+        }
+    );
+}
+countproduct:any
+  Countporuduct(){
+    this.http.get(`http://localhost:8080/cart/cart/count/${this.UserId}`).subscribe((data:any)=>{
+      this.countproduct = data;
+      console.log(data);
+      this.sharedService.setSharedDatacount(this.countproduct);
+    });
+  }
+
 }

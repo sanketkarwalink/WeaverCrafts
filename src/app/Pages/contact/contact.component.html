@@ -49,42 +49,42 @@
 										</div>
 										<div class="col-md-4">
 											<div class="dbox w-100 d-flex align-items-start">
-						        		<div class="text">
-							            <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><span style="font-size: large;-webkit-text-fill-color: burlywood;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;outline-color: black;">Phone:</span> <a href="tel://1234567920">  +91 9499344335</a></p>
-							          </div>
+						        		
 						          </div>
 										</div>
 									</div>
-									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
-												</div>
-											</div>
-											<div class="col-md-12"> 
-												<div class="form-group">
-													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="submit" value="Send Message" class="btn btn-primary">
-													<div class="submitting"></div>
-												</div>
-											</div>
-										</div>
-									</form>
+									<!-- contact-form.component.html -->
+<form (ngSubmit)="submitForm()" id="contactForm" name="contactForm" class="contactForm">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name" [(ngModel)]="formData.name">
+            </div>
+        </div>
+        <div class="col-md-12"> 
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)]="formData.email">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" [(ngModel)]="formData.subject">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here" [(ngModel)]="formData.message"></textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary">
+                <div class="submitting"></div>
+            </div>
+        </div>
+    </div>
+</form>
+
 									<div class="w-100 social-media mt-5">
 										<h3 style="font-family: initial;font-size: x-large;font-style: oblique;">Follow Us Here!!</h3>
 										<p><b>

@@ -224,3 +224,57 @@
   background-color: #4a3721; /* Darker brown */
   border-color: #4a3721;
 }
+
+
+/* Modal Styling */
+.modal-content {
+  background-color: #f8f9fa; /* Light background for the modal */
+  border-radius: 5px; /* Rounded corners for the modal */
+}
+
+.modal-header, .modal-body, .modal-footer {
+  padding: 20px; /* Padding inside the modal sections */
+}
+
+.modal-title {
+  color: #495057; /* Dark color for the modal title */
+}
+
+.close {
+  color: #495057; /* Dark color for the close button */
+  opacity: 1; /* Fully opaque close button */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  border-color: #007bff; /* Primary button border color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darken button on hover */
+  border-color: #0056b3; /* Darken button border on hover */
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: 0.25rem; /* Slightly rounded borders for form inputs */
+  border: 1px solid #ced4da; /* Light grey border for form inputs */
+}
+
+.form-group label {
+  color: #495057; /* Dark color for form labels */
+}
+
+/* Save Changes Button */
+.btn-primary {
+  color: #fff; /* White text for primary buttons */
+  background-color: #007bff; /* Blue background for primary buttons */
+  border-color: #007bff; /* Blue border for primary buttons */
+}
+
+.btn-primary:hover {
+  color: #fff; /* White text for primary buttons on hover */
+  background-color: #0056b3; /* Darker blue background on hover */
+  border-color: #004085; /* Darker blue border on hover */
+}

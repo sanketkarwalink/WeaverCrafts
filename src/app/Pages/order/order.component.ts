@@ -69,18 +69,38 @@ export class OrderComponent implements OnInit {
   // Confirm Order
 
   sendOrderId:any
-  OrderConfirm(){
-    const body ={}
+  selectedPaymentMethod = '';
+  OrderConfirm() {
+    const body = {};
     const orderId = this.orderDetails[0].orderId;
     console.log(orderId);
-    
-    this.http.post(`http://localhost:8080/Confirm/confirm-order/${orderId}/${this.UserId}/Cash`,body).subscribe((data:any)=>{
-      this.sendOrderId=data;
-      this.sharedService.setSharedDataConfirmId(this.sendOrderId);
-      this.router.navigate(['/ConfirmOrder']);
-    });
+  
+    // Check if a payment method is selected
+    if (!this.selectedPaymentMethod) {
+      console.error("Payment method is not selected");
+      // Optionally, show a message to the user or handle the error
+      alert("Please Select Mode Of Payment"); // Exit the function early if payment method is not selected
+    }
+  else{
+    // Proceed with the POST request
+    this.http.post(`http://localhost:8080/Confirm/confirm-order/${orderId}/${this.UserId}/${this.selectedPaymentMethod}`, body)
+      .subscribe((data: any) => {
+        this.sendOrderId = data;
+        this.sharedService.setSharedDataConfirmId(this.sendOrderId);
+        this.router.navigate(['/ConfirmOrder']);
+      });
+    }
   }
-
+  
+  storeSelectedPaymentMethod() {
+    if (this.selectedPaymentMethod) {
+      console.log('Selected Payment Method:', this.selectedPaymentMethod);
+      // You can perform any other actions here, such as storing the selected payment method in a variable or sending it to a backend service
+    } else {
+      console.log('Please select a payment method.');
+      // You can provide feedback to the user if no payment method is selected
+    }
+  }
   }
 
 

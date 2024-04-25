@@ -1,53 +1,98 @@
-/* Embedded CSS Styles */
-.card {
-    background-color: #fff;
-    border: 1px solid #ced4da;
-    transition: box-shadow 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.bg-image {
-    position: relative;
+/* CSS: Enhanced styling for a handcrafted products theme */
+.product-card {
+    background-color: #f4f0e8; /* Warm off-white background */
+    border: 1px solid #ccc2b2; /* Soft beige border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    border-radius: 10px;
     overflow: hidden;
+    padding: 20px; /* Added padding for spacing */
 }
 
-.hover-zoom:hover img {
-    transform: scale(1.1);
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for hover effect */
 }
 
-.hover-zoom .hover-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.3s ease;
+/* Rounded image styling */
+.product-image img {
+    border-radius: 10px; /* Consistent rounded corners for images */
+    transition: transform 0.3s ease-in-out;
 }
 
-.hover-zoom:hover .hover-overlay {
-    background-color: rgba(255, 255, 255, 0.1);
+.product-image:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Removed hover-overlay for cleaner look */
+
+.rating i {
+    color: #d1a073; /* Warm star color for visibility */
 }
 
 .btn-primary {
-    background-color: #8B4513; /* Saddle Brown */
-    border-color: #8B4513;
+    background-color: #b85c38; /* Earthy red tone for primary button */
+    border-color: #b85c38;
 }
 
 .btn-primary:hover {
-    background-color: #6E3812; /* Darker Saddle Brown */
-    border-color: #6E3812;
+    background-color: #9e4e2a; /* Darker shade on hover */
+    border-color: #9e4e2a;
 }
 
 .btn-outline-secondary {
-    color: #8B4513; /* Saddle Brown */
-    border-color: #8B4513;
+    color: #b89f85; /* Warm gray for secondary button */
+    border-color: #b89f85;
 }
 
 .btn-outline-secondary:hover {
-    color: #fff; /* White */
-    background-color: #8B4513; /* Saddle Brown */
-    border-color: #8B4513;
+    color: #f4f0e8;
+    background-color: #b89f85;
+    border-color: #b89f85;
+}
+
+@media (max-width: 768px) {
+    .product-card-body {
+        padding: 15px;
+    }
+}
+
+/* Added fadeIn animation for product card */
+.product-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Additional styles for product details */
+.product-details {
+    font-size: 0.9rem; /* Smaller font size for details */
+    color: #666; /* Darker color for readability */
+}
+
+.product-name {
+    font-size: 1.5rem; /* Larger font size for product name */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 0.5rem; /* Spacing after product name */
+}
+
+.product-price {
+    font-size: 1.25rem; /* Larger font size for price */
+    color: #333; /* Darker color for emphasis */
+    margin-bottom: 1rem; /* Spacing after price */
+}
+
+.stock-info {
+    font-size: 1rem; /* Font size for stock information */
+    color: #28a745; /* Green color for in-stock status */
+    margin-bottom: 1rem; /* Spacing after stock info */
+}
+
+/* Aligning buttons next to each other with spacing */
+.button-group {
+    display: flex;
+    gap: 10px; /* Spacing between buttons */
+}
+
+.quantity-input {
+    max-width: 60px; /* Fixed width for quantity input */
+    margin-right: 10px; /* Spacing after quantity input */
 }

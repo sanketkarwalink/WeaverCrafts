@@ -1,0 +1,17 @@
+<!-- artists.component.html -->
+<div class="container">
+  <h1>Our Artisans</h1>
+  <div class="artist-grid">
+    <ng-container *ngFor="let c of category; let i = index">
+      <div class="artist-card">
+        <div class="artist-content">
+          <img [src]="c.photo" alt="Artist" class="artist-image">
+          <div class="artist-info">
+            <h2 class="artist-name">{{ c.name }}</h2>
+            <p class="artist-description">{{ c.description }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
